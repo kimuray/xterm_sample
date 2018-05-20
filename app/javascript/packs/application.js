@@ -7,4 +7,8 @@
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
 
-console.log('Hello World from Webpacker')
+import { Terminal } from 'xterm';
+
+const xterm = new Terminal();
+xterm.open(document.getElementById('terminal'));
+xterm.write('Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ');
